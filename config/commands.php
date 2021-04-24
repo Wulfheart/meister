@@ -48,7 +48,7 @@ return [
     | Hidden Commands
     |--------------------------------------------------------------------------
     |
-    | Your application commands will always be visible on the application list
+    | Your meister commands will always be visible on the meister list
     | of commands. But you can still make them "hidden" specifying an array
     | of commands below. All "hidden" commands can still be run/executed.
     |

@@ -89,7 +89,7 @@ class MakeCommand extends Command
             return true;
         });
 
-        $this->notify('meister', 'Laravel application bootstrapped.');
+        $this->notify('meister', 'Laravel meister bootstrapped.');
 
 
 
