@@ -22,7 +22,7 @@ class MakeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make {name} {--yes}';
+    protected $signature = 'make {name} {--a|all}';
 
     /**
      * The description of the command.
@@ -73,7 +73,7 @@ class MakeCommand extends Command
         // Iterate the queue for asking
         /** @var Task $item */
         $this->queue->map(function (Task $item) {
-            if($this->option('yes')){
+            if($this->option('all')){
                 $item->register();
             } else if (!$item->required() && $this->confirm($item->prompt())) {
                 $item->register();
@@ -82,13 +82,14 @@ class MakeCommand extends Command
         });
 
 
-
         $this->queue->each(function (Task $item) {
             if ($item->execute()) {
-                return !$item->required() || $this->task($item->description(), [$item, 'work']);
+                return $this->task($item->description(), [$item, 'work']) || !$item->required();
             }
             return true;
         });
+
+        $this->notify('meister', 'Laravel application bootstrapped.');
 
 
 

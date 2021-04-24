@@ -9,7 +9,7 @@ use TitasGailius\Terminal\Terminal;
 class LaravelJetstreamLivewire extends Task
 {
     protected string $prompt = "Install Laravel Jetstream Livewire?";
-    protected string $description = "Installing Laravel Jetstream Livewire";
+    protected string $description = "Install Laravel Jetstream Livewire";
 
     protected function handle(): void
     {

@@ -13,11 +13,6 @@ class ComposerCreateProject extends Task
 
     protected function handle(): void
     {
-//        $this->runCommand("composer create-project laravel/laravel {$this->ctx->argument('name')}", null);
-        $writeConfig = new Rewrite();
-        var_dump($this->wd() . '/config/app.php');
-        $writeConfig->toFile($this->wd() . '/config/app.php', [
-            'name' => 'new value',
-        ]);
+        $this->runCommand("composer create-project laravel/laravel {$this->ctx->argument('name')}", null);
     }
 }
