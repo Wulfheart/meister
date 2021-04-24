@@ -22,7 +22,7 @@ class MakeCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make {name}';
+    protected $signature = 'make {name} {--yes}';
 
     /**
      * The description of the command.
@@ -73,9 +73,12 @@ class MakeCommand extends Command
         // Iterate the queue for asking
         /** @var Task $item */
         $this->queue->map(function (Task $item) {
-            if (!$item->required() && $this->confirm($item->prompt())) {
+            if($this->option('yes')){
+                $item->register();
+            } else if (!$item->required() && $this->confirm($item->prompt())) {
                 $item->register();
             }
+
         });
 
 

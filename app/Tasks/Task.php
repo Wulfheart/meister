@@ -48,6 +48,7 @@ class Task
             $this->handle();
 
         }catch (\Exception $e){
+            $this->ctx->error($e);
             return false;
         }
         return true;
@@ -67,7 +68,9 @@ class Task
             $terminal = $terminal->in($wd);
         }
         $result = $terminal->run($command);
+        var_dump($result->output());
         if(!$result->successful()){
+            var_dump($result->lines());
             throw new Exception();
         }
     }

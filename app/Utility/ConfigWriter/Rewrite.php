@@ -1,4 +1,5 @@
 <?php
+# https://github.com/daftspunk/laravel-config-writer
 
 namespace App\Utility\ConfigWriter;
 
@@ -31,6 +32,7 @@ class Rewrite
     public function toFile(string $filePath, array $newValues, bool $useValidation = true): string
     {
         $contents = file_get_contents($filePath);
+        var_dump($contents);
         $contents = $this->toContent($contents, $newValues, $useValidation);
         file_put_contents($filePath, $contents);
 
