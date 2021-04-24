@@ -42,5 +42,7 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "bin": ["meister"]
+    "bin": [
+        "application"
+    ]
 }

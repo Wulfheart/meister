@@ -7,7 +7,7 @@ use Illuminate\Contracts\Console\Kernel;
 trait CreatesApplication
 {
     /**
-     * Creates the meister.
+     * Creates the application.
      *
      * @return \Illuminate\Foundation\Application
      */
