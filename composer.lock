@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "be24e94a89efab51d2529cde722b38ba",
+    "content-hash": "7012be2e20ca57baa4b57081502db531",
     "packages": [
         {
             "name": "brick/math",
@@ -3426,6 +3426,59 @@
             "time": "2021-03-28T09:42:18+00:00"
         },
         {
+            "name": "titasgailius/terminal",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TitasGailius/terminal.git",
+                "reference": "33396b5128d8fb1ee108bb1b4ed64ba74c85c642"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TitasGailius/terminal/zipball/33396b5128d8fb1ee108bb1b4ed64ba74c85c642",
+                "reference": "33396b5128d8fb1ee108bb1b4ed64ba74c85c642",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/process": "^4.4.2|^5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3",
+                "phpunit/phpunit": "^9.0",
+                "symfony/var-dumper": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TitasGailius\\Terminal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Titas Gailius",
+                    "email": "titas.gailius@gmail.com"
+                }
+            ],
+            "description": "Terminal is an Elegent wrapper around Symfony's Process component.",
+            "keywords": [
+                "bash",
+                "exec",
+                "laravel",
+                "process",
+                "symfony",
+                "terminal"
+            ],
+            "support": {
+                "issues": "https://github.com/TitasGailius/terminal/issues",
+                "source": "https://github.com/TitasGailius/terminal"
+            },
+            "time": "2021-01-24T15:15:06+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.3.0",
             "source": {
@@ -6127,7 +6180,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
