@@ -7,10 +7,10 @@ return [
     | Application Namespace
     |--------------------------------------------------------------------------
     |
-    | Blueprint uses the default Laravel application namespace of 'App'.
+    | Blueprint uses the default Laravel meister namespace of 'App'.
     | However, you may configure Blueprint to use a custom namespace.
     | This value should match a PSR-4 autoload configuration value
-    | within the composer.json file of your Laravel application.
+    | within the composer.json file of your Laravel meister.
     |
     */
     'namespace' => 'App',
@@ -36,7 +36,7 @@ return [
     | Application Path
     |--------------------------------------------------------------------------
     |
-    | By default, Blueprint will save the generated application components
+    | By default, Blueprint will save the generated meister components
     | under the files under the `app` folder. However, you may configure
     | Blueprint  to save these generated component under a custom path.
     |
